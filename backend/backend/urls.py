@@ -4,13 +4,14 @@ from django.urls import path, include
 
 from . import settings
 from .spectacular import urlpatterns as spectacular_urls
-from core.views import IndexListView
+from core.views import IndexListView, ChangeStatusRedirectView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-    path('', IndexListView.as_view(), name='index')
+    path('', IndexListView.as_view(), name='index'),
+    path('change-status/', ChangeStatusRedirectView.as_view(), name='change')
 ] + spectacular_urls
 
 
