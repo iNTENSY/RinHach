@@ -1,19 +1,10 @@
-# API YaMDb
+# RinHack
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/-Django-092E20?style=flat&logo=django&logoColor=white)
 ![Django REST framework](https://img.shields.io/badge/-Django%20REST%20framework-ff9900?style=flat&logo=django&logoColor=white)
 ![Postman](https://img.shields.io/badge/-Postman-FF6C37?style=flat&logo=postman&logoColor=white)
 ## Описание проекта
 Данный проект основан на моделях машинного обучения для выявления подозрительных транзакций. Инструкции указаны ниже.
-
-## Ресурсы RinHack
-- auth: аутентификация.
-- users: пользователи.
-- titles: произведения, к которым пишут отзывы (определённый фильм, книга или песенка).
-- categories: категории (типы) произведений («Фильмы», «Книги», «Музыка»).
-- genres: жанры произведений. Одно произведение может быть привязано к нескольким жанрам.
-- reviews: отзывы на произведения.
-- comments: комментарии к отзывам.
 
 
 ## Запуск проекта
@@ -54,6 +45,9 @@ python manage.py runserver
 приведенной выше
 
 ```
-http://127.0.0.1:8000/redoc/
+1) http://127.0.0.1:8000/schema/download/ Ссылка на скачивание YAML файла с инструкциями
+2) http://127.0.0.1:8000/swagger ссылка на swagger
+3) http://127.0.0.1:8000/redoc ссылка на автоматически созданную документацию
 ```
 ## Над проектом работали
+Головинский Семён, Даценко Дмитрий, Геннадий Погуляй, Симоненков Николай, Воробьёв Максим
