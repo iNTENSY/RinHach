@@ -1,0 +1,56 @@
+header {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  span.suspect {
+    color: #dc3545;
+    font-weight: bold;
+  }
+
+  span.confirmed {
+    color: #28a745;
+    font-weight: bold;
+  }
+
+  button {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    background-color: #343a40;
+    color: white;
+  }
+
+  .transactions-header {
+    font-weight: bold;
+    font-size: 20px;
+  }
