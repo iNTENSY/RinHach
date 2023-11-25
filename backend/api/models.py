@@ -22,6 +22,7 @@ class Transactions(models.Model):
         default=CHOICES[0],
         max_length=20
     )
+    is_denied = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = '"Транзакция"'

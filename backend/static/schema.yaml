@@ -49,18 +49,23 @@ components:
           type: integer
         customer:
           type: string
+          maxLength: 255
         age:
           type: integer
         gender:
           type: string
+          maxLength: 255
         zipcodeOri:
           type: string
+          maxLength: 255
         merchant:
           type: integer
         zipMerchant:
           type: string
+          maxLength: 255
         category:
           type: string
+          maxLength: 255
         amount:
           type: integer
         fraud:

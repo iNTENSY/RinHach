@@ -6,4 +6,4 @@ from api.models import Transactions
 class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transactions
-        exclude = ('id',)
+        exclude = ('id', 'is_denied')
