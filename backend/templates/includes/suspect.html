@@ -1,0 +1,8 @@
+suspect
+
+{% for object in objects %}
+	{% if object.fraud == "suspect" %}
+		{{ object }}
+	{% endif %}
+{% endfor %}
+<hr>
