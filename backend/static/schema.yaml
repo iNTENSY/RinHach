@@ -1,0 +1,92 @@
+openapi: 3.0.3
+info:
+  title: TransactionAPI
+  version: 1.0.0
+  description: Данная страница автоматически генерирует документацию к API проекта
+paths:
+  /api/v1/feedback/:
+    post:
+      operationId: api_v1_feedback_create
+      tags:
+      - api
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Transaction'
+        required: true
+      security:
+      - cookieAuth: []
+      - basicAuth: []
+      - {}
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Transaction'
+          description: ''
+components:
+  schemas:
+    FraudEnum:
+      enum:
+      - suspect
+      - approved
+      type: string
+      description: |-
+        * `suspect` - Сомнительный
+        * `approved` - Одобренный
+    Transaction:
+      type: object
+      properties:
+        step:
+          type: integer
+        customer:
+          type: string
+          maxLength: 255
+        age:
+          type: integer
+        gender:
+          type: string
+          maxLength: 255
+        zipcodeOri:
+          type: string
+          maxLength: 255
+        merchant:
+          type: integer
+        zipMerchant:
+          type: string
+          maxLength: 255
+        category:
+          type: string
+          maxLength: 255
+        amount:
+          type: integer
+        fraud:
+          allOf:
+          - $ref: '#/components/schemas/FraudEnum'
+          title: Статус
+      required:
+      - age
+      - amount
+      - category
+      - customer
+      - gender
+      - merchant
+      - step
+      - zipMerchant
+      - zipcodeOri
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: sessionid
